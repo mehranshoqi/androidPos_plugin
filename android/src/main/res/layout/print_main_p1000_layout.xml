@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
+        android:id="@+id/printFL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/printLL"
+            android:padding="0dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ir.pigi.android_pos.customViews.FontTextView
+            android:id="@+id/tvPrintStoreName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:textSize="16dp"
+            android:clickable="false"
+
+            android:imeOptions="actionNext"
+            android:textAlignment="center"
+            android:singleLine="false"
+            android:text="فروشگاه دارسیس" />
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="32px"
+            android:layout_weight="0.8"
+            android:layout_height="32px"></ImageView>
+    </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="horizontal">
+        <ir.pigi.android_pos.customViews.FontTextView
+            android:id="@+id/tvPrintUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:textSize="11dp"
+            android:clickable="false"
+            android:gravity="right|center_vertical"
+            android:imeOptions="actionNext"
+            android:singleLine="false"
+            android:text="" />
+                <ir.pigi.android_pos.customViews.FontTextView
+                    android:id="@+id/tvPrintCounter"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="11dp"
+                    android:clickable="false"
+                    android:gravity="right|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:singleLine="false"
+                    android:text="" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+        <ir.pigi.android_pos.customViews.FontTextView
+            android:id="@+id/tvPrintInvDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:textSize="13dp"
+            android:clickable="false"
+            android:gravity="right|center_vertical"
+            android:imeOptions="actionNext"
+            android:singleLine="false"
+            android:text="" />
+                <ir.pigi.android_pos.customViews.FontTextView
+                    android:id="@+id/tvPrintInvNo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.5"
+                    android:textSize="13dp"
+                    android:clickable="false"
+                    android:gravity="right|center_vertical"
+                    android:imeOptions="actionNext"
+                    android:singleLine="false"
+                    android:text="" />
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5px"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/line_devider_shape"
+                android:clickable="false" />
+       <TableLayout android:id="@+id/tblPrintInv"
+           android:layout_height="wrap_content" android:layout_width="match_parent" >
+           <TableRow>
+               <ir.pigi.android_pos.customViews.FontTextView
+
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.3"
+                   android:textSize="13dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text="مبلغ"/>
+
+               <View
+                   android:layout_width="1px"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:background="@drawable/line_devider_shape"
+                   android:clickable="false" />
+               <ir.pigi.android_pos.customViews.FontTextView
+
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.1"
+
+                   android:rotation="-0"
+                   android:textSize="10dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text="تعداد"/>
+               <View
+                   android:layout_width="1px"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:background="@drawable/line_devider_shape"
+                   android:clickable="false" />
+               <ir.pigi.android_pos.customViews.FontTextView
+
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.6"
+                   android:textSize="13dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text="نام کالا" />
+
+           </TableRow>
+           <View
+               android:layout_width="match_parent"
+               android:layout_height="5px"
+               android:layout_margin="3dp"
+               android:background="@drawable/line_devider_shape"
+               android:clickable="false" />
+
+
+
+           <TableRow>
+               <ir.pigi.android_pos.customViews.FontTextView
+                   android:id="@+id/tvPrintDeliveryFee"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.3"
+                   android:textSize="13dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text=""/>
+
+               <View
+                   android:layout_width="2px"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:background="@drawable/line_devider_shape"
+                   android:clickable="false" />
+               <ir.pigi.android_pos.customViews.FontTextView
+                   android:id="@+id/tvPrintDeliveryQty"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.1"
+
+                   android:rotation="-0"
+                   android:textSize="13dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text=""/>
+               <View
+                   android:layout_width="1px"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:visibility="visible"
+                   android:background="@drawable/line_devider_shape"
+                   android:clickable="false" />
+               <ir.pigi.android_pos.customViews.FontTextView
+
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.6"
+                   android:textSize="13dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text="هزینه ارسال" />
+
+           </TableRow>
+
+           <TableRow>
+               <ir.pigi.android_pos.customViews.FontTextView
+                   android:id="@+id/tvPrintTaxFee"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.3"
+                   android:textSize="13dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text=""/>
+
+               <View
+                   android:layout_width="2px"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:background="@drawable/line_devider_shape"
+                   android:clickable="false" />
+               <ir.pigi.android_pos.customViews.FontTextView
+                   android:id="@+id/tvPrintTaxQty"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.1"
+
+                   android:rotation="-0"
+                   android:textSize="13dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text=""/>
+               <View
+                   android:layout_width="1px"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:visibility="visible"
+                   android:background="@drawable/line_devider_shape"
+                   android:clickable="false" />
+               <ir.pigi.android_pos.customViews.FontTextView
+
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.6"
+                   android:textSize="13dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text="ارزش افروده" />
+
+           </TableRow>
+
+
+           <TableRow>
+               <ir.pigi.android_pos.customViews.FontTextView
+                    android:id="@+id/tvPrintTotalFee"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.3"
+                   android:textSize="15dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text=""/>
+
+               <View
+                   android:layout_width="2px"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:background="@drawable/line_devider_shape"
+                   android:clickable="false" />
+               <ir.pigi.android_pos.customViews.FontTextView
+                    android:id="@+id/tvPrintTotalQty"
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.1"
+
+                   android:rotation="-0"
+                   android:textSize="15dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text=""/>
+               <View
+                   android:layout_width="1px"
+                   android:layout_height="match_parent"
+                   android:layout_marginLeft="5dp"
+                   android:layout_marginRight="5dp"
+                   android:background="@drawable/line_devider_shape"
+                   android:clickable="false" />
+               <ir.pigi.android_pos.customViews.FontTextView
+
+                   android:layout_width="0dp"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center"
+                   android:layout_weight="0.6"
+                   android:textSize="15dp"
+                   android:clickable="false"
+                   android:gravity="right|center_vertical"
+                   android:imeOptions="actionNext"
+                   android:singleLine="false"
+                   android:text="مجموع" />
+
+           </TableRow>
+
+       </TableLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10px"
+                android:layout_margin="5dp"
+                android:background="@drawable/line_devider_shape"
+                android:clickable="false" />
+            <ir.pigi.android_pos.customViews.FontTextView
+                android:id="@+id/tvPrintAddr"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.4"
+                android:textSize="15dp"
+                android:clickable="false"
+                android:gravity="right|center_vertical"
+                android:imeOptions="actionNext"
+                android:singleLine="false"
+                android:text="" />
+        </LinearLayout>
+    </FrameLayout>

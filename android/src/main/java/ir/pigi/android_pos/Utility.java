@@ -63,7 +63,13 @@ public class Utility {
 
     public static View inflateLayout(Activity context, InvoiceReqVM model){
         context.setTheme(R.style.LaunchTheme);
-        View mainView = LayoutInflater.from(context).inflate(R.layout.print_main_layout,null);
+        int lytId = R.layout.print_main_layout;
+        int dtlLytId = R.layout.print_detail_layout;
+        if(Utility.isPosP1000()){
+            lytId = R.layout.print_main_p1000_layout;
+            dtlLytId = R.layout.print_detail_p1000_layout;
+        }
+        View mainView = LayoutInflater.from(context).inflate(lytId,null);
 
         ViewGroup vg = (TableLayout) mainView.findViewById(R.id.tblPrintInv);
 
@@ -102,7 +108,7 @@ public class Utility {
         for (InvoiceDetailVM dtl :
                 model.products) {
             int dLyt = R.layout.print_detail_layout;
-            View detailView = LayoutInflater.from(context).inflate(dLyt,null);
+            View detailView = LayoutInflater.from(context).inflate(dtlLytId,null);
             FontTextView tvProductTitle = detailView.findViewById(R.id.tvPrintProductTitle);
             FontTextView tvQty = detailView.findViewById(R.id.tvPrintQty);
             FontTextView tvFee = detailView.findViewById(R.id.tvPrintFee);
