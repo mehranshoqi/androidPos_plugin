@@ -114,7 +114,7 @@ public class PosCommP1000 implements IPosComm {
         ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE},
                 23);
         View v = Utility.inflateLayout(activity,model);
-        bm[0] = Utility.loadBitmapFromView(v,300);
+        bm[0] = Utility.loadBitmapFromView(v,450);
         new Handler().postDelayed(new Runnable() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
