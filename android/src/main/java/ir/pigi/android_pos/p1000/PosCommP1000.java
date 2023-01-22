@@ -111,6 +111,8 @@ public class PosCommP1000 implements IPosComm {
     @Override
     public void printInvoice(Context context,Activity activity,InvoiceReqVM model) {
         final Bitmap[] bm = {null};
+        ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,Manifest.permission.WRITE_EXTERNAL_STORAGE},
+                23);
         View v = Utility.inflateLayout(activity,model);
         bm[0] = Utility.loadBitmapFromView(v,300);
         new Handler().postDelayed(new Runnable() {
@@ -118,6 +120,7 @@ public class PosCommP1000 implements IPosComm {
             @Override
             public void run() {
                 //bm[0] = Utility.Base64ImgToBmp(model.logo);
+
                 ArrayList<Bitmap> bitmapList = new ArrayList<>();
                 bitmapList.add(bm[0]);
                 saveFile(bitmapList);
