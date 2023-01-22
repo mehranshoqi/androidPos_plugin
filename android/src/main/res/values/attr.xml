@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="NumberType" format="enum">
+        <enum name="Persian" value="0"/>
+        <enum name="PersianNumberOnly" value="1"/>
+        <enum name="English" value="2"/>
+    </attr>
+    <attr name="IsPersianDate" format="boolean">
+    </attr>
+    <attr name="ThoudandSeperator" format="boolean"></attr>
+    <declare-styleable name="FontTextView">
+        <attr name="NumberType"/>
+    </declare-styleable>
+    <declare-styleable name="FontEditText">
+        <attr name="NumberType"/>
+        <attr name="IsPersianDate"/>
+        <attr name="ThoudandSeperator"/>
+    </declare-styleable>
+    <declare-styleable name="FontAutoCompleteTextView">
+        <attr name="NumberType"/>
+    </declare-styleable>
+</resources>

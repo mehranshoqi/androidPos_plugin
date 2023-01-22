@@ -1,0 +1,6 @@
+//project(':libs_project').projectDir = new File(rootDir, 'libs_project/')
+//rootProject.name = 'android_pos'
+include ':android_pos'
+include ':libs_project'
+project(':android_pos').projectDir = file('android')
+project(':libs_project').projectDir = file('android/libs_project')

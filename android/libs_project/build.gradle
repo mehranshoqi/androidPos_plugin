@@ -1,0 +1,6 @@
+configurations.maybeCreate("default")
+artifacts.add("default", file('Rahyab_Hybrid_CPSDK_1.0.20.aar'))
+//artifacts.add("default", file('databinding-runtime-7.3.0.aar'))
+//artifacts.add("default", file('lifecycle-runtime-2.4.0.aar'))
+//
+//artifacts.add("default", file('viewbinding-7.3.0.aar'))

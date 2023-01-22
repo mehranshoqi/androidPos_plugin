@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="ir.pigi.android_pos">
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application android:theme="@style/LaunchTheme">
+        <activity
+            android:name="com.kishcore.novinpay.activities.CardPaymentActivity"
+            android:exported="true"
+             >
+<!--            <intent-filter>-->
+<!--                <action android:name="com.kishcore.novinpay.activities.CardPaymentActivity" />-->
+<!--            </intent-filter>-->
+        </activity>
+    </application>
+</manifest>
