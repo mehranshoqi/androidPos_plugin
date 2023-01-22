@@ -14,6 +14,7 @@ import android.os.Environment;
 import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
+import android.view.View;
 
 import androidx.annotation.RequiresApi;
 import androidx.core.app.ActivityCompat;
@@ -110,11 +111,13 @@ public class PosCommP1000 implements IPosComm {
     @Override
     public void printInvoice(Context context,Activity activity,InvoiceReqVM model) {
         final Bitmap[] bm = {null};
+        View v = Utility.inflateLayout(activity,model);
+        bm[0] = Utility.loadBitmapFromView(v,300);
         new Handler().postDelayed(new Runnable() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void run() {
-                bm[0] = Utility.Base64ImgToBmp(model.logo);
+                //bm[0] = Utility.Base64ImgToBmp(model.logo);
                 ArrayList<Bitmap> bitmapList = new ArrayList<>();
                 bitmapList.add(bm[0]);
                 saveFile(bitmapList);
