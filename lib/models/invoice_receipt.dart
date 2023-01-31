@@ -1,8 +1,8 @@
-import 'buy_invoice_product.dart';
+import 'new_invoice_product.dart';
 
 class InvoiceReceiptParams{
   final String tax, transportCost, totalPayAmount, invoiceNumber, date;
-  final List<BuyInvoiceProduct> products;
+  final List<NewInvoiceProduct> products;
   final String? customer, description, marketer,logo;
 
   InvoiceReceiptParams({
@@ -22,8 +22,7 @@ class InvoiceReceiptParams{
     'tax': tax,
     'transportCost': transportCost,
     'totalPayAmount': totalPayAmount,
-    'invoiceNumber': invoiceNumber,
-    'invoiceNumber': invoiceNumber,
+        'invoiceNumber': invoiceNumber,
     'date': date,
     'products':products,
     'customer': customer,
